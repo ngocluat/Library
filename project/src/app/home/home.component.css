@@ -190,7 +190,7 @@ body {
 }
 
 .main-section {
-  height: 100vh;
+  height: 200px;
 }
 
 .custom-select-wrapper .input-wrapper {
@@ -477,4 +477,8 @@ a {
 
 .product_bubble_right {
   right: 15px;
+}
+
+a {
+  text-decoration: none;
 }

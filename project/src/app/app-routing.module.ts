@@ -6,6 +6,7 @@ import {FooterComponent} from "./footer/footer.component";
 import {HomeComponent} from "./home/home.component";
 import {DetailComponent} from "./detail/detail.component";
 import {ErrorComponent} from "./error/error.component";
+import {CartComponent} from "./cart/cart.component";
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'index', component: HomeComponent},
   {path: 'header', component: HeaderComponent},
   {path: 'footer', component: FooterComponent},
+  {path: 'love', component: CartComponent},
   {path: 'detail/:id', component: DetailComponent},
   {path: 'error', component: ErrorComponent},
 ];

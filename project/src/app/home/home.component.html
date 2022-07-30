@@ -61,7 +61,8 @@
 </div>
 <div class="container justify-content-center" style="">
   <h2 class="mg-l">Sản Phẩm </h2>
-  <div class="col-12 bu justify-content-center ">
+
+  <div class="col-12 bu justify-content-center">
     <button type="button" class="btn btn-cus mx-2" data-toggle="button" aria-pressed="false" (click)="getAll()">Tất cả
     </button>
     <button type="button" class="btn btn-cus mx-2" data-toggle="button" aria-pressed="false" (click)="getAllChungCu()">
@@ -79,27 +80,29 @@
       Condotel
     </button>
   </div>
+
   <div class="col-12">
     <div class="row row-cols-1 row-cols-md-4">
       <div *ngFor="let item of realEstate" class="col-12">
-        <a [routerLink]="['/detail/',item.id]">
+
           <div class="col mb-4 main">
             <div class="card">
               <img src="{{item.avatar}}" class="card-img-top img" alt="">
               <small class="product_bubble_l product_bubble_left">
                 <span
                   style="background-color: rgba(49,0,54,0.69); border-radius: 5px"> {{item.type.name}}</span></small>
-              <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center">
+              <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center" (click)="addItemToCart(item)">
                 <span style="color: #ff5e99;"><i class="bi bi-balloon-heart "></i></span></div>
+              <a [routerLink]="['/detail/',item.id]">
               <div class="card-body">
                 <h5 class="card-title an p">{{item.title}}</h5>
                 <p class="card-text mg small p">{{item.address}}.</p>
                 <p class="card-text  an1 p"> Giá từ : <span> <b>{{item.price.from}}</b></span> - <span> <b>{{item.price.to}}
                   Tỷ</b></span></p>
               </div>
+              </a>
             </div>
           </div>
-        </a>
       </div>
     </div>
   </div>

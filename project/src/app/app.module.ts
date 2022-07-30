@@ -8,10 +8,12 @@ import {AppRoutingModule} from './app-routing.module';
 import {HomeComponent} from './home/home.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import { CommonModule } from "@angular/common";
-import { DetailComponent } from './detail/detail.component';
+import {CommonModule} from "@angular/common";
+import {DetailComponent} from './detail/detail.component';
 import {RouterModule} from "@angular/router";
-import { ErrorComponent } from './error/error.component';
+import {ErrorComponent} from './error/error.component';
+import {CartComponent} from "./cart/cart.component";
+import {ToastrModule} from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ErrorComponent } from './error/error.component';
     FooterComponent,
     HomeComponent,
     DetailComponent,
-    ErrorComponent
+    ErrorComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { ErrorComponent } from './error/error.component';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
-    CommonModule
+    CommonModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],

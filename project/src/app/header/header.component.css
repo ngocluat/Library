@@ -13,7 +13,7 @@
 }
 
 .head {
-  width: 170px;
+  width: 100px;
   height: 40px;
 }
 
@@ -31,17 +31,8 @@ i {
 }
 
 /* --------------------------------------------------------- MAIN -----------------------------------------*/
-
 .outside {
   background-color: rgba(100, 21, 67, 0.75);
-}
-
-/*Responsive*/
-
-@media (max-width: 767.98px) {
-  body {
-
-  }
 }
 
 .head {
@@ -51,7 +42,7 @@ i {
 
 .love {
   float: right;
-  margin-right: 100px;
+  margin-right: 20px;
   color: deeppink;
   padding-right: 0;
 }
@@ -62,4 +53,8 @@ i {
 
 .bold {
   font-weight: 700;
+}
+
+a {
+  text-decoration: none;
 }

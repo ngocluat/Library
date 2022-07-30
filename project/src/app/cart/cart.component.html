@@ -1,0 +1,37 @@
+<header id="site-header">
+  <div class="container">
+    <h1>Ưa thích<span></span></h1>
+  </div>
+</header>
+
+<div class="container">
+  <section id="cart">
+    <article *ngFor="let cartDetail of cartDetails" class="product">
+      <header>
+        <a class="remove">
+          <img alt="" src="{{cartDetail.house.houseImage}}">
+          <h3>
+            <button class="btn btn-primary" data-target="#exampleModal" data-toggle="modal" style="width: 170px;">
+              Xoá
+            </button>
+          </h3>
+        </a>
+      </header>
+      <div class="content">
+        <h1> {{cartDetail.house.houseName}}</h1>
+        Giá : {{cartDetail.house.housePrice | number}} VND
+      </div>
+      <footer class="content">
+        <span class="qt-minus">-</span>
+        <span class="qt">1</span>
+        <span class="qt-plus">+</span>
+        <h2 class="full-price">
+          {{cartDetail.house.housePrice}}
+        </h2>
+        <h2 class="price">
+          {{cartDetail.quantity}}
+        </h2>
+      </footer>
+    </article>
+  </section>
+</div>
