@@ -1,0 +1,65 @@
+.bgr {
+  background-image: url("../../assets/main3.png");
+  height: 500px;
+  width: 100%;
+  clear: both;
+}
+
+.pd-t {
+  margin-top: 100px;
+  color: black;
+  margin-left: 50px;
+  margin-bottom: 40px
+}
+
+.head {
+  width: 170px;
+  height: 40px;
+}
+
+@font-face {
+  font-family: "vazir-md";
+}
+
+* {
+  font-family: "vazir-md", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+i {
+  margin-top: 7px;
+}
+
+/* --------------------------------------------------------- MAIN -----------------------------------------*/
+
+.outside {
+  background-color: rgba(100, 21, 67, 0.75);
+}
+
+/*Responsive*/
+
+@media (max-width: 767.98px) {
+  body {
+
+  }
+}
+
+.head {
+  background-color: #f4f3ff;
+  margin-left: 20px
+}
+
+.love {
+  float: right;
+  margin-right: 100px;
+  color: deeppink;
+  padding-right: 0;
+}
+
+.forn-w {
+  color: white
+}
+
+.bold {
+  font-weight: 700;
+}

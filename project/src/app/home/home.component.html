@@ -1,0 +1,106 @@
+<div class="row">
+  <div class="col-12 bgr">
+    <div><h1 class="pd-t forn-w bold"> Sàn giao dịch bất động sản </h1></div>
+    <div>
+      <div class="row">
+        <div class="col-md-9">
+          <div class="main-section">
+            <div class="containeres outside">
+              <div class="custom-select-wrapper">
+                <h4 class="forn-w">Tỉnh </h4>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Tỉnh, Thành Phố " class="custom-select" readonly="readonly">
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  <ul>
+                    <li>
+                      <span>Đà Nẵng</span>
+                    </li>
+                    <li>
+                      <span>Hà Nội</span>
+                    </li>
+                    <li>
+                      <span>TP. Hồ Chí Minh </span>
+                    </li>
+                    <li>
+                      <span>Đà Lạt</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="custom-select-wrapper">
+                <h4 class="forn-w">Diện Tích</h4>
+                <div class="input-wrapper">
+                  <input type="text" placeholder="Diện Tích" class="custom-select" readonly="readonly">
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  <ul>
+                    <li>
+                      <span>< 30 m2</span>
+                    </li>
+                    <li>
+                      <span>30 - 45 m2</span>
+                    </li>
+                    <li>
+                      <span>45 - 60 m2</span>
+                    </li>
+                    <li>
+                      <span>> 60 m2</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="custom-select-wrapper">
+                <button type="submit" class="butt"><i class="bi bi-search"></i>ㅤTìm Kiếm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container justify-content-center" style="">
+  <h2 class="mg-l">Sản Phẩm </h2>
+  <div class="col-12 bu justify-content-center ">
+    <button type="button" class="btn btn-cus mx-2" data-toggle="button" aria-pressed="false" (click)="getAll()">Tất cả
+    </button>
+    <button type="button" class="btn btn-cus mx-2" data-toggle="button" aria-pressed="false" (click)="getAllChungCu()">
+      Chung cư
+    </button>
+    <button type="button" class="btn btn-cus mx-2" data-toggle="button" aria-pressed="false" (click)="getAlBietThu()">
+      Biệt
+      thự
+    </button>
+    <button type="button" class="btn btn-cus mx-2" data-toggle="button" aria-pressed="false"
+            (click)="getAllShophouse()">
+      Shophouse
+    </button>
+    <button type="button" class="btn btn-cus mx-2" data-toggle="button" aria-pressed="false" (click)="getAllCondotel()">
+      Condotel
+    </button>
+  </div>
+  <div class="col-12">
+    <div class="row row-cols-1 row-cols-md-4">
+      <div *ngFor="let item of realEstate" class="col-12">
+        <a [routerLink]="['/detail/',item.id]">
+          <div class="col mb-4 main">
+            <div class="card">
+              <img src="{{item.avatar}}" class="card-img-top img" alt="">
+              <small class="product_bubble_l product_bubble_left">
+                <span
+                  style="background-color: rgba(49,0,54,0.69); border-radius: 5px"> {{item.type.name}}</span></small>
+              <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center">
+                <span style="color: #ff5e99;"><i class="bi bi-balloon-heart "></i></span></div>
+              <div class="card-body">
+                <h5 class="card-title an p">{{item.title}}</h5>
+                <p class="card-text mg small p">{{item.address}}.</p>
+                <p class="card-text  an1 p"> Giá từ : <span> <b>{{item.price.from}}</b></span> - <span> <b>{{item.price.to}}
+                  Tỷ</b></span></p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

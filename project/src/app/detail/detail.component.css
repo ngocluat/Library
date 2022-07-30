@@ -1,0 +1,20 @@
+#slideCont {
+  border:solid 1px #000;
+  text-align:center;
+}
+
+#slideCont img {
+  margin: 5px;
+}
+.he{
+  height: 400px
+}
+.mg-l{
+  margin-left: 20px;
+}
+.mg-t{
+  margin-top:auto ;
+}
+.mg-t1{
+  margin-top: 20px;
+}
